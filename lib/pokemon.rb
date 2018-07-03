@@ -1,6 +1,6 @@
 require "pry"
 class Pokemon
-  attr_accessor :name, :type, :db, :id, :hp
+  attr_accessor :name, :type, :db, :id
 
   def initialize(pokemon_array)
   end
@@ -16,12 +16,7 @@ class Pokemon
     pokemon.id = poke_instance[0][0]
     pokemon.name = poke_instance[0][1]
     pokemon.type = poke_instance[0][2]
-    pokemon.hp = poke_instance[0][3]
     return pokemon
   end
 
-  # def alter_hp(num, db)
-  #   db.execute("UPDATE pokemon SET hp = ? WHERE id = ?", num, self.id)
-  #   self.hp = num
-  # end
 end
